@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color: #1b1410;
+  background: #fff9f5;
+  font-family: 'Manrope', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(249, 115, 22, 0.08), transparent 28%),
+    radial-gradient(circle at 90% 10%, rgba(255, 182, 119, 0.22), transparent 18%),
+    #fff9f5;
+  color: #1b1410;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+::selection {
+  background: rgba(249, 115, 22, 0.2);
+}
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading text-ink;
+  }
+
+  p,
+  a,
+  button,
+  input,
+  textarea,
+  select {
+    @apply font-body;
+  }
+
+  button:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible,
+  select:focus-visible,
+  a:focus-visible {
+    @apply outline-none ring-2 ring-warm/50 ring-offset-2 ring-offset-canvas;
+  }
+}
+
+@layer components {
+  .section-shell {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .surface-panel {
+    @apply rounded-[28px] border border-white/60 bg-white/80 shadow-card backdrop-blur-md;
+  }
+
+  .soft-gradient {
+    background:
+      linear-gradient(135deg, rgba(249, 115, 22, 0.18), rgba(255, 255, 255, 0.8)),
+      #fffaf6;
+  }
+
+  .hero-shadow {
+    box-shadow: 0 30px 70px rgba(249, 115, 22, 0.14);
+  }
+
+  .ring-sheen {
+    box-shadow:
+      0 0 0 1px rgba(255, 255, 255, 0.6),
+      0 20px 45px rgba(27, 20, 16, 0.08);
+  }
+
+  .grain-border {
+    border: 1px solid rgba(255, 255, 255, 0.65);
+  }
+}
+
