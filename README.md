@@ -68,7 +68,7 @@ Copy [`server/.env.example`](/C:/Users/gchan/Desktop/dbms/server/.env.example) t
 PORT=5000
 MONGODB_URI=mongodb://127.0.0.1:27017/bites
 JWT_SECRET=replace-with-a-long-random-secret
-CLIENT_URL=http://localhost:5173
+FRONTEND_URL=http://localhost:5173
 NODE_ENV=development
 ```
 
