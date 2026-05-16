@@ -2,7 +2,7 @@
 
 Bites is a production-ready MERN food ordering website with a premium React frontend, secure JWT auth, persistent cart behavior, and a full Express/MongoDB backend.
 
-## What’s included
+## What's included
 
 - Modern responsive home page with hero, featured foods, categories, popular picks, testimonials, CTA, navbar, and footer
 - Dynamic menu browsing with search, category filters, sorting, pagination, loading states, and empty states
@@ -37,7 +37,7 @@ Bites is a production-ready MERN food ordering website with a premium React fron
 
 ```text
 dbms/
-  client/
+  frontend/
     public/
     src/
       components/
@@ -48,7 +48,7 @@ dbms/
       routes/
       services/
       utils/
-  server/
+  backend/
     config/
     controllers/
     data/
@@ -60,21 +60,21 @@ dbms/
 
 ## Environment setup
 
-### Server
+### Backend
 
-Copy [`server/.env.example`](/C:/Users/gchan/Desktop/dbms/server/.env.example) to `server/.env` and update the values if needed.
+Copy [`backend/.env.example`](/C:/Users/gchan/Desktop/dbms/backend/.env.example) to `backend/.env` and update the values if needed.
 
 ```env
 PORT=5000
 MONGODB_URI=mongodb://127.0.0.1:27017/bites
 JWT_SECRET=replace-with-a-long-random-secret
-FRONTEND_URL=http://localhost:5173
+FRONTEND_URL=http://localhost:5173,http://127.0.0.1:5173
 NODE_ENV=development
 ```
 
-### Client
+### Frontend
 
-Copy [`client/.env.example`](/C:/Users/gchan/Desktop/dbms/client/.env.example) to `client/.env`.
+Copy [`frontend/.env.example`](/C:/Users/gchan/Desktop/dbms/frontend/.env.example) to `frontend/.env`.
 
 ```env
 VITE_API_URL=/api
@@ -86,8 +86,8 @@ From the project root:
 
 ```bash
 npm install
-npm install --prefix server
-npm install --prefix client
+npm install --prefix backend
+npm install --prefix frontend
 ```
 
 Or use the combined helper after root dependencies are installed:
@@ -114,8 +114,8 @@ This runs:
 ### Alternative individual commands
 
 ```bash
-npm run dev --prefix server
-npm run dev --prefix client
+npm run dev --prefix backend
+npm run dev --prefix frontend
 ```
 
 ## Production build
@@ -124,7 +124,7 @@ npm run dev --prefix client
 npm run build
 ```
 
-The frontend production output is written to [`client/dist`](/C:/Users/gchan/Desktop/dbms/client/dist).
+The frontend production output is written to [`frontend/dist`](/C:/Users/gchan/Desktop/dbms/frontend/dist).
 
 ## API routes
 
@@ -161,7 +161,7 @@ The frontend production output is written to [`client/dist`](/C:/Users/gchan/Des
 
 ## Verified locally
 
-- Frontend production build succeeds with `npm run build --prefix client`
+- Frontend production build succeeds with `npm run build --prefix frontend`
 - Backend app module loads successfully
 - Backend health endpoint responds at `/api/health`
 - Seeded categories and foods are returned correctly
