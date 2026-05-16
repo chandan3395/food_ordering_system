@@ -166,3 +166,5 @@ The frontend production output is written to [`client/dist`](/C:/Users/gchan/Des
 - Backend health endpoint responds at `/api/health`
 - Seeded categories and foods are returned correctly
 - Register, logout, login, `/api/auth/me`, order creation, search, category filters, and order history all succeeded against the live local MongoDB instance
+
+# food_ordering_system
